@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\C# EOY Project\bin\Debug\net6.0\C# EOY Project.exe
+C:\Users\HP\Desktop\C# EOY Project\bin\Debug\net6.0\C# EOY Project.deps.json
+C:\Users\HP\Desktop\C# EOY Project\bin\Debug\net6.0\C# EOY Project.runtimeconfig.json
+C:\Users\HP\Desktop\C# EOY Project\bin\Debug\net6.0\C# EOY Project.dll
+C:\Users\HP\Desktop\C# EOY Project\bin\Debug\net6.0\C# EOY Project.pdb
+C:\Users\HP\Desktop\C# EOY Project\obj\Debug\net6.0\C# EOY Project.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\C# EOY Project\obj\Debug\net6.0\C# EOY Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\C# EOY Project\obj\Debug\net6.0\C# EOY Project.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\C# EOY Project\obj\Debug\net6.0\C# EOY Project.AssemblyInfo.cs
+C:\Users\HP\Desktop\C# EOY Project\obj\Debug\net6.0\C# EOY Project.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\C# EOY Project\obj\Debug\net6.0\C# EOY Project.dll
+C:\Users\HP\Desktop\C# EOY Project\obj\Debug\net6.0\refint\C# EOY Project.dll
+C:\Users\HP\Desktop\C# EOY Project\obj\Debug\net6.0\C# EOY Project.pdb
+C:\Users\HP\Desktop\C# EOY Project\obj\Debug\net6.0\C# EOY Project.genruntimeconfig.cache
+C:\Users\HP\Desktop\C# EOY Project\obj\Debug\net6.0\ref\C# EOY Project.dll
