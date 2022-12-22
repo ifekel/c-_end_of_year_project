@@ -148,24 +148,118 @@ namespace LibraryManagementSystem
             Console.WriteLine("\n");
 
             User user1 = new User();
-            user1.Name = "John Smith";
-            user1.Age = 30;
-            user1.Address = "123 Main Street";
+            // user1.Name = "John Smith";
+            // user1.Age = 30;
+            // user1.Address = "123 Main Street";
+            // user1.NumberOfBooksInCustody = 0;
+
+            Console.Write("Please enter your name: ");
+            user1.Name = Console.ReadLine();
+            
+            Console.Write("Please enter your age: ");
+            user1.Age = Convert.ToInt32(Console.ReadLine());
+            
+            Console.Write("Kindly enter your address: ");
+            user1.Address = Console.ReadLine();
+            
             user1.NumberOfBooksInCustody = 0;
 
+            Console.WriteLine("\n");
+            choose_action:
             library.AddUser(user1);
-
-            library.BorrowBook(user1.Name, book1.Name);
-
-            Console.WriteLine($"{user1.Name} has {user1.NumberOfBooksInCustody} books in their custody.");
-
-            library.ReturnBook(user1.Name, book1.Name);
-
-            Console.WriteLine($"{user1.Name} has {user1.NumberOfBooksInCustody} books in their custody.");
+            Console.WriteLine("Enter an action to perform: \n1.Borrow Book\n2.Return Book");
+            Console.WriteLine(">>> ");
+            int action = Convert.ToInt32(Console.ReadLine());
             
-            library.BorrowBook(user1.Name, book3.Name);
+            switch (action)
+            {
+                case 1:
+                {
+                    Console.WriteLine("You've chosen to borrow a book");
+                    Console.WriteLine("Enter the name of the book you wish to borrow");
+                    Console.Write("Name: ");
+                    string bookName = Console.ReadLine();
+                    if ((bookName == book1.Name) || (bookName == book2.Name) || (bookName == book3.Name))
+                    {
+                        if (bookName == book1.Name)
+                        {
+                            Console.WriteLine($"You've borrowed {book1.Name}");
+                            library.BorrowBook(user1.Name, book1.Name);
+                            Console.WriteLine($"{user1.Name} has {user1.NumberOfBooksInCustody} books in their custody.");
+                            goto choose_action;
+                        } 
+                        else if (bookName == book2.Name)
+                        {
+                            Console.WriteLine($"You've borrowed {book2.Name}");
+                            library.BorrowBook(user1.Name, book2.Name);
+                            Console.WriteLine($"{user1.Name} has {user1.NumberOfBooksInCustody} books in their custody.");
+                            goto choose_action;
+                        }
+                        else if (bookName == book3.Name)
+                        {
+                            Console.WriteLine($"You've borrowed {book3.Name}");
+                            library.BorrowBook(user1.Name, book3.Name);
+                            Console.WriteLine($"{user1.Name} has {user1.NumberOfBooksInCustody} books in their custody.");
+                            goto choose_action;
+                        }
+                        else
+                        {
+                            Console.WriteLine("That book is not in the inventory!");
+                            goto choose_action;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("The book is not in the inventory...please do request for the book.");
+                        goto choose_action;
+                    }
+                    break;
+                }
 
-            Console.WriteLine($"{user1.Name} has {user1.NumberOfBooksInCustody} books in their custody.");
+                case 2:
+                {
+                    Console.WriteLine("You've chosen to return a book");
+                    Console.WriteLine("Enter the name of the book you wish to return");
+                    Console.Write("Name: ");
+                    string bookName = Console.ReadLine();
+                    if ((bookName == book1.Name) || (bookName == book2.Name) || (bookName == book3.Name))
+                    {
+                        if (bookName == book1.Name)
+                        {
+                            Console.WriteLine($"You've returned {book1.Name}");
+                            library.ReturnBook(user1.Name, book1.Name);
+                            Console.WriteLine($"{user1.Name} has {user1.NumberOfBooksInCustody} books in their custody.");
+                            goto choose_action;
+
+                        } 
+                        else if (bookName == book2.Name)
+                        {
+                            Console.WriteLine($"You've returned {book2.Name}");
+                            library.ReturnBook(user1.Name, book2.Name);
+                            Console.WriteLine($"{user1.Name} has {user1.NumberOfBooksInCustody} books in their custody.");
+                            goto choose_action;
+                        }
+                        else if (bookName == book3.Name)
+                        {
+                            Console.WriteLine($"You've returned {book3.Name}");
+                            library.ReturnBook(user1.Name, book3.Name);
+                            Console.WriteLine($"{user1.Name} has {user1.NumberOfBooksInCustody} books in their custody.");
+                            goto choose_action;
+                        }
+                        else
+                        {
+                            Console.WriteLine("You didn't borrow that book!");
+                            goto choose_action;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("You didn't borrow that book! please do borrow the book.");
+                        goto choose_action;
+                    }
+                    break;
+                }
+            }
         }
     }
 }
